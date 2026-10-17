@@ -36,6 +36,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            // Installs beside the official app instead of replacing it
+            applicationIdSuffix = ".sbs"
+        }
         release {
             isMinifyEnabled = true
             proguardFiles(
