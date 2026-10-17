@@ -38,7 +38,9 @@ jobs:
           } > signing.properties
 
       - name: Build
+        shell: bash
         run: |
+          chmod +x gradlew
           if [ "$HAS_SIGNING" = "true" ]; then
             ./gradlew assembleDebug assembleRelease
           else
